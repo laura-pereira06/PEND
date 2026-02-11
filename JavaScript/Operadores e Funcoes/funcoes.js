@@ -24,8 +24,8 @@ function imc(ps, alt) {
     return ps / (alt * alt);
 }
 
-let ps = 42; //em kg
-let alt = 1.60; // em metros
+let ps = prompt("Digite seu peso em kg:"); //em kg
+let alt = prompt("Digite sua altura (m):"); // em metros
 console.log("Seu IMC é: " + imc(ps, alt));
 
 //atividade 8
@@ -38,3 +38,9 @@ function imparOuPar(num) {
 }
 let num = 7;
 console.log("O número é", imparOuPar(num));
+
+//funcoes nativas- data e hora
+console.log("Funções nativas");
+
+let agora = new Date();
+console.log(agora);
