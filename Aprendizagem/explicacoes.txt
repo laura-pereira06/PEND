@@ -1,0 +1,41 @@
+Melhorias realizadas
+
+Durante o desenvolvimento do projeto NewsToday foram realizadas diversas melhorias com o objetivo de transformar uma página simples em um site de notícias moderno, organizado e responsivo. Foi criada uma identidade visual própria para o site, utilizando um cabeçalho com nome, slogan e um menu de navegação com categorias como Início, Tecnologia, Esportes, Economia, Mundo e Contato.
+
+Também foram desenvolvidos cards de notícias com imagens, títulos, descrições e links para leitura, deixando a apresentação dos conteúdos mais organizada e semelhante a um portal de notícias real. Foi criada uma área de destaque para a Copa do Mundo 2026, com notícias relacionadas ao evento esportivo e informações voltadas ao público interessado em futebol.
+
+Além disso, foram aplicadas melhorias no design da página, como utilização de cores mais modernas e chamativas, melhor contraste entre os elementos, bordas arredondadas, sombras nos cards e ajustes de espaçamento para proporcionar uma aparência mais profissional e agradável ao usuário.
+
+Também foram realizados ajustes de responsividade para garantir que o site tenha uma boa visualização em diferentes dispositivos, como computadores, tablets e celulares, melhorando a experiência de navegação.
+
+Elementos semânticos utilizados
+
+Durante a construção do site foram utilizados elementos HTML semânticos para melhorar a organização do código, facilitar a interpretação da estrutura da página pelos navegadores e contribuir para a acessibilidade.
+
+O elemento <header> foi utilizado para representar o cabeçalho principal do site, contendo o nome da página, slogan e menu de navegação. O elemento <nav> foi utilizado para organizar os links das categorias disponíveis no menu.
+
+O elemento <main> foi utilizado para identificar o conteúdo principal da página, enquanto o elemento <section> foi utilizado para separar diferentes áreas de notícias e conteúdos específicos, como a seção da Copa do Mundo 2026.
+
+Os elementos <article> foram utilizados para representar cada notícia individualmente, permitindo uma melhor organização dos conteúdos. Os títulos foram estruturados utilizando <h1>, <h2> e <h3> para criar uma hierarquia de informações.
+
+O elemento <p> foi utilizado para os textos descritivos das notícias e o elemento <a> foi utilizado para criação dos links de acesso. Esses elementos ajudaram a deixar o código mais organizado e seguindo boas práticas de desenvolvimento web.
+
+Media Queries implementadas
+
+Foram implementadas Media Queries no CSS com o objetivo de tornar o site responsivo e adaptável para diferentes tamanhos de tela.
+
+Para dispositivos menores, como celulares, foram realizados ajustes no tamanho dos textos, organização do menu de navegação, redução dos espaçamentos e alteração da disposição dos cards de notícias para que fossem exibidos em uma única coluna, facilitando a leitura.
+
+Para telas intermediárias, como tablets, foram realizados ajustes na quantidade de cards exibidos por linha e na distribuição dos elementos, garantindo melhor aproveitamento do espaço disponível.
+
+Essas adaptações permitiram que o site mantivesse uma boa aparência e funcionalidade independentemente do dispositivo utilizado pelo usuário.
+
+Decisões de UX e UI adotadas
+
+As decisões de UX (User Experience) foram tomadas pensando em proporcionar uma navegação simples, rápida e intuitiva para os usuários. A organização das notícias em categorias facilita a busca por informações específicas, enquanto a divisão dos conteúdos em cards ajuda o usuário a identificar rapidamente os assuntos disponíveis.
+
+Também foi criada uma hierarquia visual utilizando títulos maiores, imagens em destaque e textos de apoio, permitindo que as informações mais importantes sejam percebidas com facilidade.
+
+Em relação à UI (User Interface), foram utilizadas cores modernas, contraste adequado entre textos e fundos, imagens de destaque, bordas arredondadas e sombras para criar uma interface mais atual e profissional.
+
+A padronização dos cards de notícias foi aplicada para manter uma identidade visual consistente em todo o site. Os espaçamentos e tamanhos dos elementos também foram ajustados para evitar poluição visual e melhorar a experiência do usuário.

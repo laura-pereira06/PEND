@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Cadastro de Usuário</h2>
+
+        <p id="mensagem-final"></p>
+        <p id="mensagem"></p>
+
+
+        <form action="#" onsubmit="return false;">
+    <input type="text" id="nome" placeholder="Digite seu nome">
+    <p id="mensagem-nome"></p>
+
+    <input type="email" id="email" placeholder="Digite seu email">
+    <p id="mensagem-email"></p>
+
+    <input type="password" id="senha" placeholder="Digite sua senha">
+    <p id="mensagem-senha"></p>
+
+    <input type="text" id="endereco" placeholder="Digite seu endereço">
+    <p id="mensagem-endereco"></p>
+
+    <div id="container-telefone">
+        <input type="text" id="telefone" class="telefone" placeholder="Digite seu telefone">
+    </div>
+    <p id="mensagem-telefone"></p>
+
+    <div class="container-botoes">
+        <button type="button" id="addtelefone">➕</button>
+        <button type="button" id="removertelefone">➖</button>
+    </div><br>
+
+    <button type="button" id="cadastrar">Cadastrar</button>
+</form>
+        <script src="script.js"></script>
+</body>
+
+</html>
