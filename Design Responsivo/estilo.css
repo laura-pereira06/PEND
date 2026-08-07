@@ -1,0 +1,83 @@
+@media (max-width: 768px) and (max-width: 1023px) {
+    h1 {
+        color: blue;
+    }
+    h2 {
+        color: yellow;
+    }
+}
+/* *=aplica a todos os elementos */
+* {
+    margin: 20;
+    padding: 20;
+    box-sizing: border-box;
+}
+/*.classe= aplica a todos elementos*/
+.destaque{
+    color:blue;
+    font-weight: bold;
+}
+/* #id= unico, para um elemnto especifico */
+#titulo-principal {
+    color: red;
+    text-align: center;
+}
+/* tag= altera todos os elementos daquela tag */
+P{
+    font-size: 18px;
+    line-height: 1.5;
+}
+/*h1, h2, h3= agrupamento de seletores */
+h1, h2, h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(109, 3, 148);
+}
+
+h4{
+    line-height: 1.5; /* espaço entre linhas */
+    letter-spacing: 2px; /* espaço entre letras */
+    word-spacing: 5px; /* espaço entre palavras */
+}
+
+img {
+    width: 200px;
+    border: 2px solid rebeccapurple;
+    display: block;
+    margin: auto;
+}
+
+ul {
+    list-style-type: decimal-leading-zero;
+    padding-left: 20px;
+}
+
+@media (max-width: 767px) {
+
+
+   h1 {
+       color: rgb(33, 33, 206);
+   }
+
+   destaque {
+       color: rgb(0, 255, 213);
+   }
+
+
+   p {
+       color: yellow;
+   }
+
+    h2 {
+        color: rgb(255, 0, 174);
+    }
+    h3 {
+        color: rgb(12, 255, 89);
+    }
+    h4 {
+        color:brown;
+    }
+
+    li {
+        color: green;
+    }
+}
