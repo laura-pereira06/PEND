@@ -14,10 +14,13 @@ class Produto {
         let precoFinal = this.aplicarDesconto();
 
         return `
-            <div class="produto">
+            <div>
                 <h2>${this.nome}</h2>
+
                 <p>Preço: R$ ${precoFinal.toFixed(2)}</p>
+
                 <p>Categoria: ${this.categoria}</p>
+
                 <p>Desconto: ${this.desconto}%</p>
 
                 <button onclick="excluirProduto(${index})">
@@ -30,43 +33,7 @@ class Produto {
     }
 }
 
-
-function obterProdutos() {
-    const dados = localStorage.getItem("produtos");
-
-    if (dados) {
-        return JSON.parse(dados);
-    }
-
-    return [];
-}
-
-
-function salvarProdutos(produtos) {
-    localStorage.setItem("produtos", JSON.stringify(produtos));
-}
-
-
-function exibirProdutos() {
-    const produtos = obterProdutos();
-
-    const resultado = document.getElementById("resultado");
-
-    resultado.innerHTML = "";
-
-    produtos.forEach((produtoSalvo, index) => {
-
-        const produto = new Produto(
-            produtoSalvo.nome,
-            produtoSalvo.preco,
-            produtoSalvo.categoria,
-            produtoSalvo.desconto
-        );
-
-        resultado.innerHTML += produto.exibir(index);
-    });
-}
-
+let produtos = [];
 
 document.getElementById("botaoCadastrar").addEventListener("click", function() {
 
@@ -75,26 +42,12 @@ document.getElementById("botaoCadastrar").addEventListener("click", function() {
     let categoria = document.getElementById("categoria").value;
     let desconto = parseFloat(document.getElementById("desconto").value);
 
-   
-    let produto = new Produto(
-        nome,
-        preco,
-        categoria,
-        desconto
-    );
-
-
-    let produtos = obterProdutos();
+    let produto = new Produto(nome, preco, categoria, desconto);
 
     produtos.push(produto);
 
- 
-    salvarProdutos(produtos);
-
-
     exibirProdutos();
 
-   
     document.getElementById("nome").value = "";
     document.getElementById("preco").value = "";
     document.getElementById("categoria").value = "";
@@ -102,16 +55,21 @@ document.getElementById("botaoCadastrar").addEventListener("click", function() {
 });
 
 
-function excluirProduto(index) {
+function exibirProdutos() {
 
-    let produtos = obterProdutos();
+    let resultado = "";
 
-    produtos.splice(index, 1);
+    for (let i = 0; i < produtos.length; i++) {
+        resultado += produtos[i].exibir(i);
+    }
 
-    salvarProdutos(produtos);
-
-    exibirProdutos();
+    document.getElementById("resultado").innerHTML = resultado;
 }
 
 
-exibirProdutos();
+function excluirProduto(index) {
+
+    produtos.splice(index, 1);
+
+    exibirProdutos();
+}
