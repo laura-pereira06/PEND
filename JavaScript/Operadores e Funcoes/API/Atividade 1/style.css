@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #693782;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+
+
+header {
+    background: #570657;
+    color: white;
+    padding: 30px;
+    border-radius: 12px 12px 0 0;
+    text-align: center;
+}
+
+header h1 {
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+
+
+
+main {
+    background: white;
+    padding: 25px;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 25px;
+    margin-bottom: 25px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    color: #570657;
+    margin-bottom: 15px;
+}
+
+.card p {
+    margin-bottom: 20px;
+}
+
+
+
+
+
+.informacoes {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.informacoes div {
+    flex: 1;
+    min-width: 200px;
+    background: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid #570657;
+}
+
+.informacoes span {
+    display: block;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.informacoes strong {
+    font-size: 18px;
+}
+
+
+
+
+#camera {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    margin: 20px auto;
+    background: #111;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+
+
+
+button {
+    display: block;
+    margin: 20px auto 0;
+
+    background: #570657;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 15px 30px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+button:hover {
+    background: #8100a8;
+}
+
+
+
+
+.status {
+    padding: 12px;
+    border-radius: 6px;
+    background: #eee;
+    text-align: center;
+}
+
+
+
+
+#foto {
+    display: none;
+}
+
+#fotoCapturada {
+    display: none;
+    width: 100%;
+    max-width: 600px;
+    margin: 20px auto;
+    border-radius: 10px;
+    border: 3px solid #570657;
+}
+
+
+
+
+.resultado {
+    margin-top: 20px;
+    padding: 20px;
+    background: #e9f7ef;
+    border: 1px solid #b7dfc5;
+    border-radius: 8px;
+
+    display: none;
+}
+
+.resultado h3 {
+    color: #218838;
+    margin-bottom: 10px;
+}
+
+
+
+.fotoRegistro {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    margin: 15px auto 0;
+    border-radius: 10px;
+    border: 3px solid #570657;
+}
+
+
+
+
+footer {
+    background: #570657;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 0 0 12px 12px;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        margin: 20px auto;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    #camera {
+        height: 250px;
+    }
+
+}

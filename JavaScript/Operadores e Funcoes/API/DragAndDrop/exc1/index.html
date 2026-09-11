@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Burger Master | Desafio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- FUNDO DECORATIVO -->
+    <div class="background-shape shape-1"></div>
+    <div class="background-shape shape-2"></div>
+
+    <!-- ============================= -->
+    <!-- TELA INICIAL -->
+    <!-- ============================= -->
+
+    <section id="inicio" class="tela">
+
+        <div class="logo-burger">
+            🍔
+        </div>
+
+        <span class="mini-titulo">DESAFIO CULINÁRIO</span>
+
+        <h1>BURGER<br><span>MASTER</span></h1>
+
+        <p class="descricao">
+            Monte o hambúrguer perfeito colocando
+            cada ingrediente na ordem correta.
+        </p>
+
+        <div class="recorde-inicial">
+            🏆 Recorde: <strong id="recordeInicial">0</strong> pontos
+        </div>
+
+        <button id="comecar" class="botao-principal">
+            <span>▶</span> COMEÇAR JOGO
+        </button>
+
+        <p class="dica">
+            🖱️ Arraste e solte os ingredientes
+        </p>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- JOGO -->
+    <!-- ============================= -->
+
+    <main id="jogo" class="jogo escondido">
+
+        <header class="topo">
+
+            <div class="marca">
+                <span>🍔</span>
+                <div>
+                    <strong>BURGER</strong>
+                    <small>MASTER</small>
+                </div>
+            </div>
+
+            <div class="status">
+
+                <div class="status-item">
+                    <span>⭐</span>
+                    <div>
+                        <small>PONTOS</small>
+                        <strong id="pontuacao">0</strong>
+                    </div>
+                </div>
+
+                <div class="status-item">
+                    <span>🔥</span>
+                    <div>
+                        <small>COMBO</small>
+                        <strong id="combo">0</strong>
+                    </div>
+                </div>
+
+                <div class="status-item">
+                    <span>⏱️</span>
+                    <div>
+                        <small>TEMPO</small>
+                        <strong id="tempo">60</strong>
+                    </div>
+                </div>
+
+                <div class="status-item vidas">
+                    <span>❤️</span>
+                    <div>
+                        <small>VIDAS</small>
+                        <strong id="vidas">❤️❤️❤️</strong>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="conteudo">
+
+            <!-- INGREDIENTES -->
+
+            <aside class="painel ingredientes">
+
+                <div class="titulo-painel">
+                    <div class="icone-painel">🧺</div>
+
+                    <div>
+                        <h2>Ingredientes</h2>
+                        <p>Escolha o próximo item</p>
+                    </div>
+                </div>
+
+                <div class="lista-ingredientes">
+
+                    <div class="ingrediente" draggable="true" data-id="pao">
+                        <div class="ingrediente-icone">🍞</div>
+                        <div class="ingrediente-info">
+                            <strong>Pão</strong>
+                            <small>Base</small>
+                        </div>
+                        <span class="arrastar">⠿</span>
+                    </div>
+
+                    <div class="ingrediente" draggable="true" data-id="carne">
+                        <div class="ingrediente-icone">🥩</div>
+                        <div class="ingrediente-info">
+                            <strong>Carne</strong>
+                            <small>Hambúrguer</small>
+                        </div>
+                        <span class="arrastar">⠿</span>
+                    </div>
+
+                    <div class="ingrediente" draggable="true" data-id="queijo">
+                        <div class="ingrediente-icone">🧀</div>
+                        <div class="ingrediente-info">
+                            <strong>Queijo</strong>
+                            <small>Cheddar</small>
+                        </div>
+                        <span class="arrastar">⠿</span>
+                    </div>
+
+                    <div class="ingrediente" draggable="true" data-id="alface">
+                        <div class="ingrediente-icone">🥬</div>
+                        <div class="ingrediente-info">
+                            <strong>Alface</strong>
+                            <small>Fresquinho</small>
+                        </div>
+                        <span class="arrastar">⠿</span>
+                    </div>
+
+                    <div class="ingrediente" draggable="true" data-id="tomate">
+                        <div class="ingrediente-icone">🍅</div>
+                        <div class="ingrediente-info">
+                            <strong>Tomate</strong>
+                            <small>Fatia fresca</small>
+                        </div>
+                        <span class="arrastar">⠿</span>
+                    </div>
+
+                </div>
+
+                <div class="dica-painel">
+                    💡 <span>Observe a ordem! Um ingrediente errado custa uma vida.</span>
+                </div>
+
+            </aside>
+
+
+            <!-- ÁREA CENTRAL -->
+
+            <section class="painel montagem">
+
+                <div class="cabecalho-montagem">
+
+                    <div>
+                        <span class="etapa">ETAPA <strong id="etapaAtual">1</strong>/5</span>
+                        <h2>Monte seu hambúrguer</h2>
+                    </div>
+
+                    <div class="objetivo">
+                        🎯 <span>Complete a receita</span>
+                    </div>
+
+                </div>
+
+
+                <!-- ÁREA DE DROP -->
+
+                <div id="area-drop">
+
+                    <div class="drop-conteudo">
+
+                        <div class="icone-drop">
+                            🍔
+                        </div>
+
+                        <h3>Arraste o ingrediente aqui</h3>
+
+                        <p>
+                            Comece pela base do hambúrguer
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PROGRESSO -->
+
+                <div class="progresso">
+
+                    <div class="progresso-info">
+
+                        <span>
+                            Progresso da receita
+                        </span>
+
+                        <strong id="contador">
+                            0 / 5
+                        </strong>
+
+                    </div>
+
+                    <div class="barra">
+                        <div id="barra-progresso"></div>
+                    </div>
+
+                </div>
+
+
+                <button id="reiniciar" class="botao-secundario">
+                    🔄 Reiniciar partida
+                </button>
+
+            </section>
+
+        </section>
+
+
+        <footer>
+            <span>🍔 Burger Master</span>
+            <span>Desafio Drag & Drop</span>
+        </footer>
+
+    </main>
+
+
+    <!-- ============================= -->
+    <!-- FEEDBACK -->
+    <!-- ============================= -->
+
+    <div id="feedback"></div>
+
+
+    <!-- ============================= -->
+    <!-- TELA DE RESULTADO -->
+    <!-- ============================= -->
+
+    <div id="resultado" class="overlay escondido">
+
+        <div class="caixa-resultado">
+
+            <div id="resultadoIcone" class="resultado-icone">
+                🏆
+            </div>
+
+            <span class="mini-titulo">DESAFIO FINALIZADO</span>
+
+            <h2 id="resultadoTitulo">
+                BURGER MASTER!
+            </h2>
+
+            <p id="resultadoMensagem">
+                Você conseguiu montar o hambúrguer!
+            </p>
+
+            <div class="hamburguer-final">
+                <span>🍞</span>
+                <span>🥩</span>
+                <span>🧀</span>
+                <span>🥬</span>
+                <span>🍅</span>
+            </div>
+
+            <div class="resultado-estatisticas">
+
+                <div>
+                    <small>PONTUAÇÃO</small>
+                    <strong id="pontuacaoFinal">0</strong>
+                </div>
+
+                <div>
+                    <small>COMBO MÁX.</small>
+                    <strong id="comboFinal">0</strong>
+                </div>
+
+                <div>
+                    <small>RECORDE</small>
+                    <strong id="recordeFinal">0</strong>
+                </div>
+
+            </div>
+
+            <button id="jogarNovamente" class="botao-principal">
+                🎮 JOGAR NOVAMENTE
+            </button>
+
+            <button id="voltarInicio" class="botao-link">
+                Voltar para o início
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

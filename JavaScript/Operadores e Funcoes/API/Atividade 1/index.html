@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Registro de Visita Técnica</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>📋 Registro de Visita Técnica</h1>
+            <p>Utilização das Web APIs de Geolocation e Camera</p>
+        </header>
+
+        <main>
+
+            <!-- LOCALIZAÇÃO -->
+            <section class="card">
+
+                <h2>📍 Localização</h2>
+
+                <p>
+                    Informações obtidas através da
+                    <strong>Geolocation API</strong>.
+                </p>
+
+                <div class="informacoes">
+
+                    <div>
+                        <span>Latitude</span>
+                        <strong id="latitude">Obtendo...</strong>
+                    </div>
+
+                    <div>
+                        <span>Longitude</span>
+                        <strong id="longitude">Obtendo...</strong>
+                    </div>
+
+                    <div>
+                        <span>Precisão</span>
+                        <strong id="precisao">Obtendo...</strong>
+                    </div>
+
+                </div>
+
+                <p id="statusLocalizacao" class="status">
+                    Solicitando acesso à localização...
+                </p>
+
+            </section>
+
+
+            <!-- CÂMERA -->
+            <section class="card">
+
+                <h2>📷 Câmera</h2>
+
+                <p>
+                    A câmera é acessada através da
+                    <strong>Camera API</strong>.
+                </p>
+
+                <video id="camera" autoplay playsinline></video>
+
+                <!-- BOTÃO PARA TIRAR FOTO -->
+                <button id="btnFoto">
+                    📸 Tirar Foto
+                </button>
+
+                <p id="statusCamera" class="status">
+                    Solicitando acesso à câmera...
+                </p>
+
+                <!-- CANVAS ONDE A FOTO SERÁ CAPTURADA -->
+                <canvas id="foto"></canvas>
+
+                <!-- FOTO CAPTURADA -->
+                <img id="fotoCapturada" alt="Foto capturada">
+
+            </section>
+
+
+            <!-- REGISTRO -->
+            <section class="card registro">
+
+                <h2>📝 Registro</h2>
+
+                <p>
+                    Depois de permitir o acesso à localização e à câmera,
+                    tire uma foto e clique no botão abaixo para registrar a visita.
+                </p>
+
+                <button id="btnRegistrar">
+                    Registrar Visita
+                </button>
+
+                <div id="resultado" class="resultado"></div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>Geolocation e Camera API</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
+
