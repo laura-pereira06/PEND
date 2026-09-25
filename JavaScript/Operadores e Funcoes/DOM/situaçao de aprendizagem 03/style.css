@@ -1,0 +1,398 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f6f8;
+    color: #172033;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+header {
+    background: #540606;
+    color: white;
+    padding: 18px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo > span {
+    font-size: 40px;
+}
+
+.logo h1 {
+    font-size: 25px;
+}
+
+.logo span {
+    font-size: 13px;
+    color: #cbd5e1;
+}
+
+.clima-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.clima-header > span {
+    font-size: 32px;
+}
+
+.clima-header strong {
+    display: block;
+    font-size: 18px;
+}
+
+.clima-header small {
+    color: #cbd5e1;
+}
+
+
+
+.introducao {
+    text-align: center;
+    padding: 35px 0;
+}
+
+.introducao h2 {
+    font-size: 32px;
+    margin-bottom: 5px;
+}
+
+.introducao p {
+    color: #d13232;
+}
+
+
+
+.card {
+    background: white;
+    border: 1px solid #dfe3e8;
+    border-radius: 16px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+.card h2 {
+    font-size: 25px;
+    margin-bottom: 8px;
+}
+
+.descricao {
+    color: #64748b;
+    margin-bottom: 20px;
+}
+
+
+
+.formulario {
+    display: flex;
+    gap: 12px;
+}
+
+.formulario input {
+    flex: 1;
+    height: 60px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 0 18px;
+    font-size: 16px;
+    outline: none;
+}
+
+.formulario input:focus {
+    border-color: #eb2525;
+}
+
+button {
+    border: none;
+    border-radius: 10px;
+    background: #ff0303;
+    color: white;
+    padding: 0 28px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #d81d1d;
+}
+
+button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+
+
+.botao-localizacao {
+    margin-top: 15px;
+    height: 45px;
+    background: #cc4e4e;
+}
+
+.botao-localizacao:hover {
+    background: #cc4e4e;
+}
+
+
+
+.resultado-clima {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    background: #e6a9a9;
+
+    border-radius: 14px;
+
+    padding: 25px;
+
+    margin-top: 20px;
+}
+
+.clima-icone {
+    font-size: 65px;
+}
+
+.resultado-clima h3 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.resultado-clima strong {
+    font-size: 35px;
+}
+
+.resultado-clima p {
+    color: #cc4e4e;
+}
+
+#detalhesClima {
+    margin-top: 5px;
+}
+
+
+
+.noticias-section {
+    margin-bottom: 50px;
+}
+
+.titulo-noticias {
+    margin-bottom: 25px;
+}
+
+.titulo-noticias h2 {
+    font-size: 30px;
+}
+
+.titulo-noticias p {
+    color: #cc4e4e;
+}
+
+.noticias-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+
+
+.noticia {
+    background: white;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    transition: 0.2s;
+}
+
+.noticia:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.noticia img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+
+    background: #e5e7eb;
+}
+
+.noticia-conteudo {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    flex: 1;
+}
+
+.noticia h3 {
+    font-size: 19px;
+    line-height: 1.35;
+
+    margin-bottom: 10px;
+}
+
+.noticia p {
+    color: #030303;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
+}
+
+.noticia-info {
+    margin-top: auto;
+
+    font-size: 13px;
+
+    color: #cc4e4e;
+}
+
+.noticia a {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    color: #eb2525;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.noticia a:hover {
+    text-decoration: underline;
+}
+
+
+
+.mensagem {
+    color: #000000;
+    margin: 15px 0;
+}
+
+.sem-noticias {
+    background: white;
+
+    border: 1px solid #e1e5ea;
+
+    border-radius: 12px;
+
+    padding: 30px;
+
+    text-align: center;
+
+    color: #090909;
+}
+
+.erro {
+    color: #b91c1c;
+
+    background: #fee2e2;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 10px;
+
+    padding: 15px;
+}
+
+
+footer {
+    background: #540606;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+
+    margin-top: 40px;
+}
+
+footer p {
+    color: #cbd5e1;
+}
+
+
+
+@media (max-width: 900px) {
+
+    .noticias-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .formulario {
+        flex-direction: column;
+    }
+
+    .formulario input {
+        width: 100%;
+    }
+
+    .formulario button {
+        height: 55px;
+    }
+
+    .noticias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .resultado-clima {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .introducao h2 {
+        font-size: 26px;
+    }
+
+}

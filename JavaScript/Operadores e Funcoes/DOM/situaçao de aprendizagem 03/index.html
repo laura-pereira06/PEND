@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ClimaNewss</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="container header-content">
+
+            <div class="logo">
+                
+                <div>
+                    <h1>ClimaNews</h1>
+                    <span>Informação e clima</span>
+                </div>
+            </div>
+
+            <div class="clima-header">
+                <span id="iconeClima">🌤️</span>
+
+                <div>
+                    <strong id="temperatura">--°C</strong>
+                    <small id="cidadeClima">Clima</small>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <main class="container">
+
+        <section class="introducao">
+            <h2>Notícias do momento</h2>
+
+            <p>
+                Confira as principais notícias e consulte o clima
+                da sua cidade.
+            </p>
+        </section>
+
+
+        <section class="card">
+
+            <h2>🌤️ Consulte o clima</h2>
+
+            <p class="descricao">
+                Digite uma cidade para descobrir como está o tempo.
+            </p>
+
+            <div class="formulario">
+
+                <input
+                    type="text"
+                    id="cidadeInput"
+                    placeholder="Digite o nome da cidade..."
+                >
+
+                <button id="btnClima">
+                    Ver clima
+                </button>
+
+            </div>
+
+
+            <button id="btnLocalizacao" class="botao-localizacao">
+                📍 Usar minha localização
+            </button>
+
+
+            <div id="resultadoClima" class="resultado-clima">
+
+                <div class="clima-icone" id="iconeResultado">
+                    🌤️
+                </div>
+
+                <div>
+                    <h3 id="cidadeResultado">
+                        Pesquise uma cidade
+                    </h3>
+
+                    <strong id="temperaturaResultado">
+                        --°C
+                    </strong>
+
+                    <p id="descricaoClima">
+                        O resultado do clima aparecerá aqui.
+                    </p>
+
+                    <p id="detalhesClima"></p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+       
+        <section class="card">
+
+            <h2>🔎 Pesquisar notícias</h2>
+
+            <div class="formulario">
+
+                <input
+                    type="text"
+                    id="noticiaInput"
+                    placeholder="Digite o assunto que deseja pesquisar..."
+                >
+
+                <button id="btnPesquisar">
+                    Pesquisar
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        
+        <section class="noticias-section">
+
+            <div class="titulo-noticias">
+
+                <h2 id="tituloNoticias">
+                    Últimas notícias !
+                </h2>
+
+                <p>
+                    Notícias carregadas automaticamente pela API.
+                </p>
+
+            </div>
+
+
+            <p id="carregando" class="mensagem">
+                Carregando notícias...
+            </p>
+
+
+            <p id="mensagem" class="mensagem"></p>
+
+
+            <div id="noticias" class="noticias-grid"></div>
+
+        </section>
+
+    </main>
+
+
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                © Maria Laura 2026
+            </p>
+
+           
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
