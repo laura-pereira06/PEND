@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff3e0;
+    color: #5d3a29;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* Título */
+h1 {
+    color: #8b4a2f;
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+h1::after {
+    content: " 🐾";
+}
+
+/* Texto/área de busca */
+#quantidadeGatos {
+    width: 220px;
+    padding: 12px 15px;
+    border: 2px solid #d98236;
+    border-radius: 20px;
+    outline: none;
+    font-size: 16px;
+    color: #5d3a29;
+    background-color: #fffaf5;
+}
+
+#quantidadeGatos:focus {
+    border-color: #a9572d;
+}
+
+/* Botão */
+#buscarGatos {
+    padding: 12px 22px;
+    margin-left: 8px;
+    border: none;
+    border-radius: 20px;
+    background-color: #d98236;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#buscarGatos:hover {
+    background-color: #a9572d;
+    transform: scale(1.05);
+}
+
+/* Área onde aparecem os gatos */
+#resultado {
+    margin-top: 35px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* Cada gato */
+#resultado p {
+    width: 330px;
+    background-color: #fffaf5;
+    padding: 15px;
+    border-radius: 25px;
+    box-shadow: 0 5px 15px rgba(93, 58, 41, 0.18);
+    color: #8b4a2f;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Imagens */
+#resultado img {
+    width: 300px;
+    height: 250px;
+    object-fit: cover;
+    margin-top: 10px;
+    border-radius: 18px;
+    border: 5px solid #f0a35b;
+}
+
+/* Linha */
+#resultado hr {
+    display: none;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 30px;
+    }
+
+    #quantidadeGatos {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 10px;
+    }
+
+    #buscarGatos {
+        margin-left: 0;
+    }
+
+    #resultado p {
+        width: 100%;
+        max-width: 330px;
+    }
+
+    #resultado img {
+        width: 100%;
+        height: 250px;
+    }
+}
